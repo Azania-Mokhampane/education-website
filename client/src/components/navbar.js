@@ -36,12 +36,12 @@ const NavBar = () => {
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block lg:hidden h-8 w-auto "
-                    src="https://cdn-icons-png.flaticon.com/128/806/806435.png"
-                    alt="Workflow"
+                    src="/img/logo101.png"
+                    alt="logo"
                   />
                   <img
                     className="hidden lg:block h-8 w-auto "
-                    src="https://raw.githubusercontent.com/Azania-Mokhampane/landing-page/ef3349ae8c24e156bf6ce1319ed325011bc5a573/client/public/logo101.png"
+                    src="/img/logo101.png"
                     alt="logo"
                   />
                 </div>
