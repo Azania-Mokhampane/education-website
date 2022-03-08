@@ -1,20 +1,18 @@
 import React from "react";
+import "../styles/custom.css";
 
-const LandingSection = ({ description }) => {
+const LandingSection = () => {
   return (
     <>
       <div>
-        <div
-          style={{ textShadow: "0px 1px 1px" }}
-          className="flex flex-col items-center justify-start font-sans min-h-96 bg-gray-500 lg:pt-10 lg:pb-20 "
-        >
+        <div className="flex flex-col items-center justify-start font-sans min-h-96 bg-gray-300 lg:pt-10 lg:pb-20 landingpage-bgimage ">
           <div>
-            <p className="p-3 pt-12 text-lg font-bold text-white lg:text-gray-300">
+            <p className="p-3 pt-12 text-lg text-white lg:text-blue-300">
               Azania Math Solutions
             </p>
           </div>
           <div>
-            <p className="p-2 text-4xl font-bold text-center text-white lg:mx-auto lg:w-4/6 lg:text-5xl lg:text-gray-100">
+            <p className="p-2 text-4xl text-center text-white lg:mx-auto lg:w-4/6 lg:text-5xl lg:text-gray-100">
               Why Struggle with Mathematics when you can just contact us and get
               the best tutor who will help you reach your academic goals
             </p>
