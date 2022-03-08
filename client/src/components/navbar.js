@@ -1,18 +1,9 @@
 import React from "react";
+import LandingSection from "./landingSection";
 
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-
-const navigation = [
-  { name: "Home", href: "#home", current: true },
-  { name: "About", href: "#", current: false },
-  { name: "Contact Us", href: "#", current: false },
-  { name: "Book a Tutor", href: "#", current: false },
-];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -45,47 +36,46 @@ const NavBar = () => {
                     alt="logo"
                   />
                 </div>
-                <div className="hidden sm:block sm:ml-6">
-                  <div className="flex space-x-4">
-                    {navigation.map((prop) => (
-                      <a
-                        key={prop.name}
-                        href={prop.href}
-                        className={classNames(
-                          prop.current
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "px-3 py-2 rounded-md text-sm font-medium"
-                        )}
-                        aria-current={prop.current ? "page" : undefined}
-                      >
-                        {prop.name}
-                      </a>
-                    ))}
+                <Router>
+                  <div className="hidden sm:block sm:ml-6">
+                    <div className="flex space-x-4">
+                      <ul className="flex space-x-4">
+                        <li className="text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                          <Link to="/">Home</Link>
+                        </li>
+                        <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                          <Link to="/">About Us</Link>
+                        </li>
+                        <li className="  text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                          <Link to="/">Contact Us</Link>
+                        </li>
+                        <li className="text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                          <Link to="/">Book A Tutor</Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
+                </Router>
               </div>
             </div>
           </div>
 
           <Disclosure.Panel className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block px-3 py-2 rounded-md text-base font-medium"
-                  )}
-                  aria-current={item.current ? "page" : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
+              <ul>
+                <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                  Home
+                </li>
+                <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                  About Us
+                </li>
+                <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                  Contact Us
+                </li>
+                <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                  Book A Tutor
+                </li>
+              </ul>
             </div>
           </Disclosure.Panel>
         </>
