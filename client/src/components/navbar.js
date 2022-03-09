@@ -1,13 +1,12 @@
 import React from "react";
-import LandingSection from "./landingSection";
 
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <Disclosure id="home" as="nav" className="bg-gray-800">
+    <Disclosure id="home" as="nav" className="top-0 fixed  w-full bg-gray-800">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
@@ -36,26 +35,25 @@ const NavBar = () => {
                     alt="logo"
                   />
                 </div>
-                <Router>
-                  <div className="hidden sm:block sm:ml-6">
-                    <div className="flex space-x-4">
-                      <ul className="flex space-x-4">
-                        <li className="text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                          <Link to="/">Home</Link>
-                        </li>
-                        <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                          <Link to="/">About Us</Link>
-                        </li>
-                        <li className="  text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                          <Link to="/">Contact Us</Link>
-                        </li>
-                        <li className="text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                          <Link to="/">Book A Tutor</Link>
-                        </li>
-                      </ul>
-                    </div>
+
+                <div className="hidden sm:block sm:ml-6">
+                  <div className="flex space-x-4">
+                    <ul className="flex space-x-4">
+                      <li className="text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        <Link to="/landingSection">Home</Link>
+                      </li>
+                      <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        <Link to="/">About Us</Link>
+                      </li>
+                      <li className="  text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        <Link to="/">Contact Us</Link>
+                      </li>
+                      <li className="text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        <Link to="/">Book A Tutor</Link>
+                      </li>
+                    </ul>
                   </div>
-                </Router>
+                </div>
               </div>
             </div>
           </div>
