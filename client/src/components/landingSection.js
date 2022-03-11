@@ -16,7 +16,7 @@ const LandingSection = () => {
             <h1 className="p-10 pl-5  text-white lg:mx-auto lg:w-4/6 lg:text-5xl lg:text-gray-100">
               Why Struggle with Mathematics when you can just contact us and get{" "}
               <br />
-              the best tutor who will help you reach your academic goals
+              the best tutor who will help you reach your academic goals.
             </h1>
           </div>
 
