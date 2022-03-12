@@ -2,7 +2,7 @@ import React from "react";
 
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -40,16 +40,16 @@ const NavBar = () => {
                   <div className="flex space-x-4">
                     <ul className="flex space-x-4">
                       <li className="text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                        <Link to="/landingSection">Home</Link>
+                        <Link to="/">Home</Link>
                       </li>
                       <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                        <Link to="/">About Us</Link>
+                        <Link to="/about">About Us</Link>
                       </li>
                       <li className="  text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                        <Link to="/">Contact Us</Link>
+                        <Link to="/contact">Contact Us</Link>
                       </li>
                       <li className="text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                        <Link to="/">Book A Tutor</Link>
+                        <Link to="/bookATutor">Book A Tutor</Link>
                       </li>
                     </ul>
                   </div>
@@ -62,16 +62,16 @@ const NavBar = () => {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <ul>
                 <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                  Home
+                  <Link to="/">Home</Link>
                 </li>
                 <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                  About Us
+                  <Link to="/about">About Us</Link>
                 </li>
                 <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                  Contact Us
+                  <Link to="/contact">Contact Us</Link>
                 </li>
                 <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                  Book A Tutor
+                  <Link to="/bookATutor">Book A Tutor</Link>
                 </li>
               </ul>
             </div>

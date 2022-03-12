@@ -1,8 +1,10 @@
 import React from "react";
+import NavBar from "./navbar";
 
 const About = () => {
   return (
     <>
+      <NavBar />
       <div className="p-5   flex flex-col  items-center justify-start font-sans min-h-96 bg-gray-500 lg:pt-10 lg:pb-20">
         <div className="p-5 text-5xl text-white ">
           <h1>

@@ -1,18 +1,11 @@
-import LandingSection from "./components/landingSection";
 import NavBar from "./components/navbar";
-import About from "./components/about";
-import Footer from "./components/footer";
+import LandingSection from "./components/landingSection";
 
 const App = () => {
   return (
     <>
       <NavBar />
-
       <LandingSection />
-
-      <About />
-
-      <Footer />
     </>
   );
 };
