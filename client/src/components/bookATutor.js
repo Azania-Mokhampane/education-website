@@ -6,7 +6,7 @@ const BookATutor = () => {
   return (
     <>
       <NavBar />
-      <h1 className="pt-20 text-center text-3xl">
+      <h1 className="pt-20 text-center text-3xl font-medium  leading-10">
         {" "}
         <u>Book A Tut</u>or Today
       </h1>
@@ -43,7 +43,7 @@ const BookATutor = () => {
             <div className="mt-5 md:mt-0 md:col-span-2">
               <form action="#" method="POST">
                 <div className="shadow overflow-hidden sm:rounded-md">
-                  <div className="px-4 py-5 bg-white sm:p-6">
+                  <div className="px-4 py-5 bg-gray-400 sm:p-6">
                     <div className="grid grid-cols-6 gap-6">
                       <div className="col-span-6 sm:col-span-3">
                         <label
@@ -158,12 +158,12 @@ const BookATutor = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="px-4 py-3 bg-gray-50 text-center sm:px-6">
+                  <div className="px-4 py-3 bg-gray-400 text-center sm:px-6">
                     <button
                       type="submit"
-                      className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-800 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     >
-                      Book
+                      Book Now
                     </button>
                   </div>
                 </div>
