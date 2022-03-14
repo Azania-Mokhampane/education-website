@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./navbar";
 import { Formik } from "formik";
+import Footer from "./footer";
 
 import "../styles/custom.css";
 
@@ -186,10 +187,13 @@ const BookATutor = () => {
                   </div>
                 </form>
               </div>
+              s
             </div>
           </div>
         )}
       </Formik>
+
+      <Footer />
     </>
   );
 };
