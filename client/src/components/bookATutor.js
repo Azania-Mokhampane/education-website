@@ -130,22 +130,6 @@ const BookATutor = () => {
                           </select>
                         </div>
 
-                        <div className="col-span-6 sm:col-span-6 lg:col-span-2">
-                          <label
-                            htmlFor="city"
-                            className="block text-sm font-medium text-gray-700"
-                          >
-                            City
-                          </label>
-                          <input
-                            type="text"
-                            name="city"
-                            id="city"
-                            autoComplete="address-level2"
-                            className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                          />
-                        </div>
-
                         <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                           <label
                             htmlFor="region"
@@ -171,6 +155,21 @@ const BookATutor = () => {
                             <option>North Wet</option>
                             <option>Free State</option>
                           </select>
+                        </div>
+                        <div className="col-span-6 sm:col-span-6 lg:col-span-2">
+                          <label
+                            htmlFor="city"
+                            className="block text-sm font-medium text-gray-700"
+                          >
+                            City
+                          </label>
+                          <input
+                            type="text"
+                            name="city"
+                            id="city"
+                            autoComplete="address-level2"
+                            className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                          />
                         </div>
                       </div>
                     </div>
