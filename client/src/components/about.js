@@ -21,8 +21,8 @@ const About = () => {
               a single method for teaching candidates as people do not have the
               same level of understading. At Azania Math Solutions we take those
               kinds of things into consideration and teach or help different
-              individuals who has different needs with different teaching styles
-              .
+              individuals who has different needs with different teaching
+              approaches .
             </p>
           </div>
         </div>

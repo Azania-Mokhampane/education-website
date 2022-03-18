@@ -8,7 +8,7 @@ const ContactUs = () => {
   return (
     <>
       <NavBar />
-      <h1 className="pt-12">Contact Us Today</h1>
+      <h1 className="pt-12">Contact Us Today to get a tutor</h1>
 
       <Footer />
     </>
