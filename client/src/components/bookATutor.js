@@ -14,7 +14,7 @@ const BookATutor = () => {
         <u>Book A Tut</u>or Today
       </h1>
       <Formik
-        initialValues={{ email: "", password: "" }}
+        initialValues={{ email: "" }}
         validate={(values) => {
           const errors = {};
           if (!values.email) {
@@ -65,6 +65,7 @@ const BookATutor = () => {
                             First name
                           </label>
                           <input
+                            required
                             type="text"
                             name="first-name"
                             id="first-name"
@@ -186,7 +187,6 @@ const BookATutor = () => {
                   </div>
                 </form>
               </div>
-              s
             </div>
           </div>
         )}
