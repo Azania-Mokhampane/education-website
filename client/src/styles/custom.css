@@ -5,3 +5,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+input {
+  height: 2rem;
+  padding-left: 10px;
+}
+select {
+  height: 2rem;
+  padding-left: 10px;
+}

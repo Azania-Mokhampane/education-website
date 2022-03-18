@@ -1,6 +1,5 @@
-import LandingSection from "./components/landingSection";
 import NavBar from "./components/navbar";
-import About from "./components/about";
+import LandingSection from "./components/landingSection";
 import Footer from "./components/footer";
 
 const App = () => {
@@ -9,8 +8,6 @@ const App = () => {
       <NavBar />
 
       <LandingSection />
-
-      <About />
 
       <Footer />
     </>

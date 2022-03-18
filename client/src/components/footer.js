@@ -1,17 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
-      <div className="relative pt-8 pb-6 ">
+      <div className="relative text-white pt-8 pb-6 bg-gray-800 ">
         <div className="flex flex-wrap text center lg:text-left">
           <div className="w-full lg:w-6/12 px-4">
             <div className="flex place-items-center">
               <h5 className="text-2xl text-center">Useful Links</h5>
               <div className="">
-                <div className=""></div>
-                <div className=""></div>
-                <div className=""></div>
+                <div className="">
+                  <ul>
+                    <li>
+                      <Link to="/about">About Us</Link>
+                    </li>
+                    <li>
+                      <Link to="/contact">Contact Us</Link>
+                    </li>
+                    <li>
+                      <Link to="/">Terms and Conditions</Link>
+                    </li>
+                    <li>
+                      <Link to="/">Privacy Policy</Link>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -21,6 +35,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <p></p>
       </div>
     </>
   );
