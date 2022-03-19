@@ -74,7 +74,7 @@ const Footer = () => {
                   </a>
                 </button>
                 <button>
-                  <a href="#">
+                  <a href="https://api.whatsapp.com/send?phone=+27691456585">
                     <i>
                       <IoLogoWhatsapp />
                     </i>
