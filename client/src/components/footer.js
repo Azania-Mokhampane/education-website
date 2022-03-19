@@ -7,6 +7,7 @@ import {
   IoLogoWhatsapp,
   IoLogoTwitter,
 } from "react-icons/io5";
+import "../styles/custom.css";
 
 const Footer = () => {
   return (
@@ -15,7 +16,9 @@ const Footer = () => {
         <div className="flex flex-wrap text center lg:text-left">
           <div className="w-full lg:w-6/12 px-4">
             <div className="grid place-items-center">
-              <h5 className="text-2xl text-center">Useful Links</h5>
+              <h5 className="text-xl font-semibold text-center">
+                Useful Links
+              </h5>
               <div className="">
                 <div className="text-center">
                   <ul>
@@ -37,12 +40,14 @@ const Footer = () => {
             </div>
           </div>
           <div className="w-full lg:w-6/12 px-4">
-            <div className="grid place-items-center ">
-              <h5 className="text-2xl text-center">Reach Out To Us</h5>
-              <div className=" grid grid-rows-1 grid-flow-col gap-4">
-                <button>
-                  <a href="linkedin.com/in/azania-mokhampane-2728bb1a6">
-                    <i>
+            <div className="social grid place-items-center ">
+              <h5 className="text-xl font-semibold text-center">
+                Reach Out To Us
+              </h5>
+              <div className="grid grid-rows-1 grid-flow-col gap-6 pt-10 pb-5">
+                <button className="">
+                  <a href="https://linkedin.com/in/azania-mokhampane-2728bb1a6">
+                    <i className="">
                       <IoLogoLinkedin />
                     </i>
                   </a>
@@ -80,7 +85,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-10">
-          <div className="text-center">
+          <div className="text-center text-xs ">
             <p>
               Copyright © {new Date().getFullYear()} Azania Math Solutions.{" "}
               <br />
