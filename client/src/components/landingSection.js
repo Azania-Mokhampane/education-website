@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "../styles/custom.css";
 
@@ -22,7 +23,7 @@ const LandingSection = () => {
 
           <div className=" flex flex-col items-center h-48 lg:space-x-8 pt-7 lg:pt-0 lg:flex-row lg:justify-between lg:w-90">
             <button className="cursor-pointer pt-2 pb-2 text-1xl rounded-full shadow-2xl lg:mr-5 hover:text-green-300  pl-3 pr-3  focus:outline-none  font-medium text-gray-50 bg-opacity-0 ring-2 ring-white">
-              Get A Tutor Today
+              <Link to="/bookATutor">Get A Tutor Today</Link>
             </button>
           </div>
         </div>
