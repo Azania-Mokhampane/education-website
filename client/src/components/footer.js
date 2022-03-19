@@ -20,7 +20,7 @@ const Footer = () => {
                 Useful Links
               </h5>
               <div className="">
-                <div className="">
+                <div className="text-center">
                   <ul>
                     <li>
                       <Link to="/about">About Us</Link>
