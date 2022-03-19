@@ -8,12 +8,12 @@ const LandingSection = () => {
       <div>
         <div className="p-5 flex flex-col   justify-start font-sans min-h-96 bg-gray-300 lg:pt-10 lg:pb-20 landingpage-bgimage ">
           <div>
-            <h1 className="pl-5 pt-12 text-5xl text-white ">
+            <h1 className=" pt-12 text-5xl text-white ">
               Azania Math Solutions
             </h1>
           </div>
           <div>
-            <h1 className="p-10 pl-5  text-white lg:mx-auto lg:text-gray-100">
+            <h1 className="p-10 pl-0 text-white lg:mx-auto lg:text-gray-100">
               Why Struggle with Mathematics when you can just contact us and get{" "}
               <br />
               the best tutor who will help you reach your academic goals.
