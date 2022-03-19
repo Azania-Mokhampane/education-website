@@ -14,3 +14,15 @@ select {
   height: 2rem;
   padding-left: 10px;
 }
+@media (max-width: 1022px) {
+  .social {
+    padding-top: 30px;
+  }
+}
+i {
+  font-size: 25px;
+}
+i:hover {
+  color: rgb(20 184 166);
+  transition: color 0.4s ease-in;
+}
