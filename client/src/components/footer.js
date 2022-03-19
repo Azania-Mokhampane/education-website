@@ -1,12 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  IoLogoLinkedin,
-  IoLogoFacebook,
-  IoLogoYoutube,
-  IoLogoWhatsapp,
-  IoLogoTwitter,
-} from "react-icons/io5";
 
 const Footer = () => {
   return (
@@ -14,10 +7,10 @@ const Footer = () => {
       <div className="relative text-white pt-8 pb-6 bg-gray-800 ">
         <div className="flex flex-wrap text center lg:text-left">
           <div className="w-full lg:w-6/12 px-4">
-            <div className="grid place-items-center">
+            <div className="flex place-items-center">
               <h5 className="text-2xl text-center">Useful Links</h5>
               <div className="">
-                <div className="text-center">
+                <div className="">
                   <ul>
                     <li>
                       <Link to="/about">About Us</Link>
@@ -79,15 +72,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-10">
-          <div className="text-center">
-            <p>
-              Copyright © {new Date().getFullYear()} Azania Math Solutions.{" "}
-              <br />
-              All Rights Reserved.
-            </p>
-          </div>
-        </div>
+      </div>
+      <div>
+        <p></p>
       </div>
     </>
   );
