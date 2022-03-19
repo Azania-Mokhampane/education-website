@@ -48,28 +48,28 @@ const Footer = () => {
                   </a>
                 </button>
                 <button>
-                  <a href="linkedin.com/in/azania-mokhampane-2728bb1a6">
+                  <a href="#">
                     <i>
                       <IoLogoFacebook />
                     </i>
                   </a>
                 </button>
                 <button>
-                  <a href="linkedin.com/in/azania-mokhampane-2728bb1a6">
+                  <a href="#">
                     <i>
                       <IoLogoTwitter />
                     </i>
                   </a>
                 </button>
                 <button>
-                  <a href="linkedin.com/in/azania-mokhampane-2728bb1a6">
+                  <a href="#">
                     <i>
                       <IoLogoYoutube />
                     </i>
                   </a>
                 </button>
                 <button>
-                  <a href="linkedin.com/in/azania-mokhampane-2728bb1a6">
+                  <a href="#">
                     <i>
                       <IoLogoWhatsapp />
                     </i>
