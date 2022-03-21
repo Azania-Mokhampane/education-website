@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  IoLogoLinkedin,
-  IoLogoFacebook,
-  IoLogoYoutube,
-  IoLogoWhatsapp,
-  IoLogoTwitter,
-} from "react-icons/io5";
+//icons
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+
 import "../styles/custom.css";
 
 const Footer = () => {
@@ -48,35 +47,35 @@ const Footer = () => {
                 <button className="">
                   <a href="https://linkedin.com/in/azania-mokhampane-2728bb1a6">
                     <i className="">
-                      <IoLogoLinkedin />
+                      <LinkedInIcon />
                     </i>
                   </a>
                 </button>
                 <button>
                   <a href="#">
                     <i>
-                      <IoLogoFacebook />
+                      <FacebookIcon />
                     </i>
                   </a>
                 </button>
-                <button>
+                {/* <button>
                   <a href="#">
                     <i>
-                      <IoLogoTwitter />
+                      <TwitterRoundedIcon />
                     </i>
                   </a>
-                </button>
+                </button> */}
                 <button>
                   <a href="#">
                     <i>
-                      <IoLogoYoutube />
+                      <YouTubeIcon />
                     </i>
                   </a>
                 </button>
                 <button>
                   <a href="https://api.whatsapp.com/send?phone=+27691456585">
                     <i>
-                      <IoLogoWhatsapp />
+                      <WhatsAppIcon />
                     </i>
                   </a>
                 </button>
