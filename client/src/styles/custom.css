@@ -24,5 +24,5 @@ i {
 }
 i:hover {
   color: rgb(20 184 166);
-  transition: color 0.4s ease-in;
+  transition: color 0.3s ease-in;
 }
