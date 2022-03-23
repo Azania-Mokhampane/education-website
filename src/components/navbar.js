@@ -24,16 +24,20 @@ const NavBar = () => {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                  <img
-                    className="block lg:hidden h-8 w-auto "
-                    src="/img/logo101.png"
-                    alt="logo"
-                  />
-                  <img
-                    className="hidden lg:block h-8 w-auto "
-                    src="/img/logo101.png"
-                    alt="logo"
-                  />
+                  <Link to="/">
+                    <img
+                      className="block lg:hidden h-8 w-auto "
+                      src="/img/logo101.png"
+                      alt="logo"
+                    />
+                  </Link>
+                  <Link to="/">
+                    <img
+                      className="hidden lg:block h-8 w-auto "
+                      src="/img/logo101.png"
+                      alt="logo"
+                    />
+                  </Link>
                 </div>
 
                 <div className="hidden sm:block sm:ml-6">
