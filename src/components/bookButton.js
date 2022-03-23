@@ -15,7 +15,9 @@ const BookingButton = ({ username, setUserName }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen}>Book</Button>
+      <Button type="submit" onClick={onOpen}>
+        Book
+      </Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -33,7 +35,7 @@ const BookingButton = ({ username, setUserName }) => {
               mr={3}
               onClick={() => {
                 onClose();
-                setUserName("");
+                setUserName(""); // this is a function which changes the state of our userName to an empty string when the user close the modal
               }}
             >
               Close
