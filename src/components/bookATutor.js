@@ -9,6 +9,7 @@ import {
   Input,
   useColorMode,
   useColorModeValue,
+  Select,
 } from "@chakra-ui/react";
 import { Formik } from "formik";
 import * as Yup from "yup";
@@ -35,7 +36,6 @@ const BookATutor = () => {
           name: "",
           surname: "",
           email: "",
-          password: "",
         }}
         validationSchema={Yup.object({
           name: Yup.string().required("You have add a your name"),
@@ -69,7 +69,7 @@ const BookATutor = () => {
                     p={12}
                     rounded={6}
                   >
-                    <Heading mb={6}>Login In</Heading>
+                    <Heading mb={6}>Personal Information</Heading>
                     <Input
                       value={userName}
                       id="name"
@@ -101,20 +101,35 @@ const BookATutor = () => {
                       onChange={handleChange}
                       required
                     ></Input>
-                    <Input
-                      id="password"
-                      placeholder="Enter Password"
+                    <Select
+                      placeholder="Level Of Education"
                       variant="filled"
-                      mb={6}
-                      type="password"
-                      onChange={handleChange}
-                    ></Input>
+                      mb={3}
+                    >
+                      <option value="option1">Primary</option>
+                      <option value="option2">Secondary</option>
+                      <option value="option3">Tertiary</option>
+                    </Select>
+
+                    <Select placeholder="Province" variant="filled" mb={3}>
+                      <option value="option1">Gauteng</option>
+                      <option value="option2">Mpumalanga</option>
+                      <option value="option3">Free State</option>
+                      <option value="option1">Limpopo</option>
+                      <option value="option2">Western Cape</option>
+                      <option value="option3">Northern Cape</option>
+                      <option value="option1">Eastern Cape</option>
+                      <option value="option2">North West</option>
+                      <option value="option3">KwaZulu-Natal</option>
+                    </Select>
+
                     <BookingButton
                       username={userName}
                       setUserName={setUserName}
                     />
-                    <br />
-                    <Button onClick={toggleColorMode}>Toggle Color</Button>
+                    <Button mt={3} onClick={toggleColorMode}>
+                      Toggle Color
+                    </Button>
                   </Flex>
                 </form>
               </Flex>
