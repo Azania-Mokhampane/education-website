@@ -5,10 +5,9 @@ import Footer from "./components/footer";
 const App = () => {
   return (
     <>
+      {" "}
       <NavBar />
-
       <LandingSection />
-
       <Footer />
     </>
   );
