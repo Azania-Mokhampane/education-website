@@ -52,7 +52,7 @@ const Footer = () => {
                   </a>
                 </button>
                 <button>
-                  <a href="#">
+                  <a href="https://linkedin.com/in/azania-mokhampane-2728bb1a6">
                     <i>
                       <FacebookIcon />
                     </i>
@@ -66,7 +66,7 @@ const Footer = () => {
                   </a>
                 </button> */}
                 <button>
-                  <a href="#">
+                  <a href="https://linkedin.com/in/azania-mokhampane-2728bb1a6">
                     <i>
                       <YouTubeIcon />
                     </i>
