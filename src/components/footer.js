@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <>
       <div className="relative text-white pt-8 pb-6 bg-gray-800 ">
-        <div className="flex flex-wrap text center lg:text-left">
+        <div className="flex flex-wrap text center pb-6 lg:text-left">
           <div className="w-full lg:w-6/12 px-4">
             <div className="grid place-items-center">
               <h5 className="text-xl font-semibold text-center">
@@ -83,6 +83,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <hr />
         <div className="mt-10">
           <div className="text-center text-xs ">
             <p>
