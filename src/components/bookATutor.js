@@ -20,9 +20,18 @@ const BookATutor = () => {
   const { toggleColorMode } = useColorMode();
   const formBackground = useColorModeValue("gray.100", "gray.900");
   const [userName, setUserName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [userEmail, setUserEmail] = useState("");
 
   const userNameHandler = (event) => {
     setUserName(event.target.value);
+  };
+
+  const surnameHandler = (event) => {
+    setSurname(event.target.value);
+  };
+  const userEmalHandler = (event) => {
+    setUserEmail(event.target.value);
   };
 
   return (
@@ -48,14 +57,7 @@ const BookATutor = () => {
           console.log(values);
         }}
       >
-        {({
-          values,
-          errors,
-          touched,
-          handleChange,
-          handleBlur,
-          handleSubmit,
-        }) => {
+        {({ handleSubmit }) => {
           return (
             <>
               <Flex height="100vh" alignItems="center" justifyContent="center">
@@ -82,23 +84,23 @@ const BookATutor = () => {
                       className="overflow-hidden"
                     ></Input>
                     <Input
-                      value={values.surname}
+                      value={surname}
                       id="surname"
                       placeholder="Surname"
                       variant="filled"
                       mb={3}
                       type="text"
-                      onChange={handleChange}
+                      onChange={surnameHandler}
                       required
                     ></Input>
                     <Input
-                      value={values.email}
+                      value={userEmail}
                       id="email"
                       placeholder="Enter Email Address"
                       variant="filled"
                       mb={3}
                       type="email"
-                      onChange={handleChange}
+                      onChange={userEmalHandler}
                       required
                     ></Input>
                     <Select
@@ -126,6 +128,8 @@ const BookATutor = () => {
                     <BookingButton
                       username={userName}
                       setUserName={setUserName}
+                      setSurname={setSurname}
+                      setUserEmail={setUserEmail}
                     />
                     <Button mt={3} onClick={toggleColorMode}>
                       Toggle Color
