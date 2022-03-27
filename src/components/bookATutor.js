@@ -19,20 +19,28 @@ import "../styles/custom.css";
 const BookATutor = () => {
   const { toggleColorMode } = useColorMode();
   const formBackground = useColorModeValue("gray.100", "gray.900");
-  const [userName, setUserName] = useState("");
-  const [surname, setSurname] = useState("");
-  const [userEmail, setUserEmail] = useState("");
+  // const [userName, setUserName] = useState("");
+  // const [surname, setSurname] = useState("");
+  // const [userEmail, setUserEmail] = useState("");
+  const [userInfo, setUserInfo] = useState({
+    userName: "",
+    userSurname: "",
+    userEmail: "",
+  });
 
-  const userNameHandler = (event) => {
-    setUserName(event.target.value);
+  const userInfoHandler = (event) => {
+    setUserInfo(event.target.value);
   };
+  // const userNameHandler = (event) => {
+  //   setUserName(event.target.value);
+  // };
 
-  const surnameHandler = (event) => {
-    setSurname(event.target.value);
-  };
-  const userEmalHandler = (event) => {
-    setUserEmail(event.target.value);
-  };
+  // const surnameHandler = (event) => {
+  //   setSurname(event.target.value);
+  // };
+  // const userEmalHandler = (event) => {
+  //   setUserEmail(event.target.value);
+  // };
 
   return (
     <>
@@ -73,10 +81,10 @@ const BookATutor = () => {
                   >
                     <Heading mb={6}>Personal Information</Heading>
                     <Input
-                      value={userName}
+                      value={userInfo.userName}
                       id="name"
                       placeholder="Name"
-                      onChange={userNameHandler}
+                      onChange={userInfoHandler}
                       variant="filled"
                       mb={3}
                       type="text"
@@ -84,23 +92,23 @@ const BookATutor = () => {
                       className="overflow-hidden"
                     ></Input>
                     <Input
-                      value={surname}
+                      value={userInfo.userSurname}
                       id="surname"
                       placeholder="Surname"
                       variant="filled"
                       mb={3}
                       type="text"
-                      onChange={surnameHandler}
+                      onChange={userInfoHandler}
                       required
                     ></Input>
                     <Input
-                      value={userEmail}
+                      value={userInfo.userEmail}
                       id="email"
                       placeholder="Enter Email Address"
                       variant="filled"
                       mb={3}
                       type="email"
-                      onChange={userEmalHandler}
+                      onChange={userInfoHandler}
                       required
                     ></Input>
                     <Select
@@ -126,10 +134,8 @@ const BookATutor = () => {
                     </Select>
 
                     <BookingButton
-                      username={userName}
-                      setUserName={setUserName}
-                      setSurname={setSurname}
-                      setUserEmail={setUserEmail}
+                      username={userInfo.userName}
+                      setUserInfo={setUserInfo}
                     />
                     <Button mt={3} onClick={toggleColorMode}>
                       Toggle Color
