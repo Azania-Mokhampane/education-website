@@ -15,9 +15,7 @@ const BookingButton = ({ username }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button type="submit" onClick={onOpen}>
-        Book
-      </Button>
+      <Button onClick={onOpen}>Book</Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
