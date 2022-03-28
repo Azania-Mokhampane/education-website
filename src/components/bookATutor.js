@@ -42,10 +42,6 @@ const BookATutor = () => {
     setUserEmail(event.target.value);
   };
 
-  const submitHandler = (event) => {
-    event.preventDefault();
-  };
-
   return (
     <>
       <NavBar />
@@ -75,7 +71,7 @@ const BookATutor = () => {
               <Flex height="100vh" alignItems="center" justifyContent="center">
                 <form
                   style={{ width: "auto", height: "auto" }}
-                  onSubmit={submitHandler}
+                  onSubmit={handleSubmit}
                 >
                   <Flex
                     direction="column"
