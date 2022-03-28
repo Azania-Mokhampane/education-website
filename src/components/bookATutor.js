@@ -19,28 +19,32 @@ import "../styles/custom.css";
 const BookATutor = () => {
   const { toggleColorMode } = useColorMode();
   const formBackground = useColorModeValue("gray.100", "gray.900");
-  // const [userName, setUserName] = useState("");
-  // const [surname, setSurname] = useState("");
-  // const [userEmail, setUserEmail] = useState("");
-  const [userInfo, setUserInfo] = useState({
-    userName: "",
-    userSurname: "",
-    userEmail: "",
-  });
+  const [userName, setUserName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  // const [userInfo, setUserInfo] = useState({
+  //   userName: "",
+  //   userSurname: "",
+  //   userEmail: "",
+  // });
 
-  const userInfoHandler = (event) => {
-    setUserInfo(event.target.value);
+  // const userInfoHandler = (event) => {
+  //   setUserInfo(event.target.value);
+  // };
+  const userNameHandler = (event) => {
+    setUserName(event.target.value);
   };
-  // const userNameHandler = (event) => {
-  //   setUserName(event.target.value);
-  // };
 
-  // const surnameHandler = (event) => {
-  //   setSurname(event.target.value);
-  // };
-  // const userEmalHandler = (event) => {
-  //   setUserEmail(event.target.value);
-  // };
+  const surnameHandler = (event) => {
+    setSurname(event.target.value);
+  };
+  const userEmailHandler = (event) => {
+    setUserEmail(event.target.value);
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+  };
 
   return (
     <>
@@ -71,7 +75,7 @@ const BookATutor = () => {
               <Flex height="100vh" alignItems="center" justifyContent="center">
                 <form
                   style={{ width: "auto", height: "auto" }}
-                  onSubmit={handleSubmit}
+                  onSubmit={submitHandler}
                 >
                   <Flex
                     direction="column"
@@ -81,10 +85,10 @@ const BookATutor = () => {
                   >
                     <Heading mb={6}>Personal Information</Heading>
                     <Input
-                      value={userInfo.userName}
+                      value={userName}
                       id="name"
                       placeholder="Name"
-                      onChange={userInfoHandler}
+                      onChange={userNameHandler}
                       variant="filled"
                       mb={3}
                       type="text"
@@ -92,23 +96,23 @@ const BookATutor = () => {
                       className="overflow-hidden"
                     ></Input>
                     <Input
-                      value={userInfo.userSurname}
+                      value={surname}
                       id="surname"
                       placeholder="Surname"
                       variant="filled"
                       mb={3}
                       type="text"
-                      onChange={userInfoHandler}
+                      onChange={surnameHandler}
                       required
                     ></Input>
                     <Input
-                      value={userInfo.userEmail}
+                      value={userEmail}
                       id="email"
                       placeholder="Enter Email Address"
                       variant="filled"
                       mb={3}
                       type="email"
-                      onChange={userInfoHandler}
+                      onChange={userEmailHandler}
                       required
                     ></Input>
                     <Select
@@ -134,8 +138,9 @@ const BookATutor = () => {
                     </Select>
 
                     <BookingButton
-                      username={userInfo.userName}
-                      setUserInfo={setUserInfo}
+                      username={userName}
+                      type="submit"
+                      // setUserInfo={setUserInfo}
                     />
                     <Button mt={3} onClick={toggleColorMode}>
                       Toggle Color
