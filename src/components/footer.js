@@ -83,7 +83,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr />
         <div className="mt-10">
           <div className="text-center text-xs ">
             <p>
