@@ -17,6 +17,7 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { MdPhone, MdEmail, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import { BsPerson } from "react-icons/bs";
@@ -28,17 +29,11 @@ const ContactUs = () => {
       <br />
       <br />
 
-      <Container
-        bg="#9DC4FB"
-        maxW="full"
-        mt={0}
-        centerContent
-        overflow="hidden"
-      >
+      <Container maxW="full" mt={0} centerContent overflow="hidden">
         <Flex>
           <Box
-            bg="#02054B"
-            color="white"
+            bg={useColorModeValue("gray.300", "gray.900")}
+            color={useColorModeValue("gray.900", "gray.100")}
             borderRadius="lg"
             m={{ sm: 4, md: 16, lg: 10 }}
             p={{ sm: 5, md: 5, lg: 16 }}
@@ -58,7 +53,7 @@ const ContactUs = () => {
                           height="48px"
                           width="200px"
                           variant="ghost"
-                          color="#DCE2FF"
+                          color={useColorModeValue("gray.800", "gray.200")}
                           _hover={{ border: "2px solid #1C6FEB" }}
                           leftIcon={<MdPhone color="#1970F1" size="20px" />}
                         >
@@ -69,7 +64,7 @@ const ContactUs = () => {
                           height="48px"
                           width="200px"
                           variant="ghost"
-                          color="#DCE2FF"
+                          color={useColorModeValue("gray.800", "gray.200")}
                           _hover={{ border: "2px solid #1C6FEB" }}
                           leftIcon={<MdEmail color="#1970F1" size="20px" />}
                         >
@@ -80,7 +75,7 @@ const ContactUs = () => {
                           height="48px"
                           width="200px"
                           variant="ghost"
-                          color="#DCE2FF"
+                          color={useColorModeValue("gray.800", "gray.200")}
                           _hover={{ border: "2px solid #1C6FEB" }}
                           leftIcon={
                             <MdLocationOn color="#1970F1" size="20px" />
@@ -93,8 +88,11 @@ const ContactUs = () => {
                   </Box>
                 </WrapItem>
                 <WrapItem>
-                  <Box bg="white" borderRadius="lg">
-                    <Box m={8} color="#0B0E3F">
+                  <Box
+                    bg={useColorModeValue("white", "gray.800")}
+                    borderRadius="lg"
+                  >
+                    <Box m={8} color={useColorModeValue("gray.900", "white")}>
                       <VStack spacing={5}>
                         <FormControl id="name">
                           <FormLabel>Your Name</FormLabel>

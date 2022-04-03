@@ -3,8 +3,11 @@ import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
+import { Button, useColorMode } from "@chakra-ui/react";
+import { BsSun, BsMoonStarsFill } from "react-icons/bs";
 
 const NavBar = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Disclosure id="home" as="nav" className="top-0 fixed  w-full bg-gray-800">
       {({ open }) => (
@@ -57,6 +60,12 @@ const NavBar = () => {
                       </li>
                     </ul>
                   </div>
+                </div>
+                <div className="absolute right-0">
+                  <Button onClick={toggleColorMode}>
+                    {" "}
+                    {colorMode === "light" ? <BsMoonStarsFill /> : <BsSun />}
+                  </Button>
                 </div>
               </div>
             </div>

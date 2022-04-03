@@ -3,11 +3,9 @@ import NavBar from "./navbar";
 import Footer from "./footer";
 import BookingButton from "./bookButton";
 import {
-  Button,
   Flex,
   Heading,
   Input,
-  useColorMode,
   useColorModeValue,
   Select,
 } from "@chakra-ui/react";
@@ -17,8 +15,7 @@ import * as Yup from "yup";
 import "../styles/custom.css";
 
 const BookATutor = () => {
-  const { toggleColorMode } = useColorMode();
-  const formBackground = useColorModeValue("gray.100", "gray.900");
+  const formBackground = useColorModeValue("gray.300", "gray.900");
   const [userName, setUserName] = useState("");
   const [surname, setSurname] = useState("");
   const [userEmail, setUserEmail] = useState("");
@@ -46,7 +43,7 @@ const BookATutor = () => {
     <>
       <NavBar />
       <h1 className="pt-20 text-center text-3xl font-medium  leading-10">
-        <u>Book A Tut</u>or Today
+        Book A Tutor Today
       </h1>
       <Formik
         initialValues={{
@@ -138,9 +135,6 @@ const BookATutor = () => {
                       type="submit"
                       // setUserInfo={setUserInfo}
                     />
-                    <Button mt={3} onClick={toggleColorMode}>
-                      Toggle Color
-                    </Button>
                   </Flex>
                 </form>
               </Flex>
