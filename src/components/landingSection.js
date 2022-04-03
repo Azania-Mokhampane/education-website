@@ -1,33 +1,99 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  Container,
+  Stack,
+  Flex,
+  Box,
+  Heading,
+  Text,
+  Button,
+  Image,
+  IconButton,
+} from "@chakra-ui/react";
 
 import "../styles/custom.css";
 
 const LandingSection = () => {
   return (
     <>
-      <div>
-        <div className="p-5 flex flex-col   justify-start font-sans min-h-96 bg-gray-300 lg:pt-10 lg:pb-20 landingpage-bgimage ">
-          <div>
-            <h1 className=" pt-12 text-5xl text-white ">
-              Azania Math Solutions
-            </h1>
-          </div>
-          <div>
-            <h1 className="p-10 pl-0 text-white lg:mx-auto lg:text-gray-100">
+      <Container maxW={"7xl"}>
+        <Stack
+          align={"center"}
+          spacing={{ base: 8, md: 10 }}
+          py={{ base: 20, md: 28 }}
+          direction={{ base: "column", md: "row" }}
+        >
+          <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+            <Heading
+              lineHeight={1.1}
+              fontWeight={600}
+              fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+            >
+              <Text as={"span"} color={"white.400"}>
+                Azania Math Solutions!
+              </Text>
+            </Heading>
+            <Text color={"gray.500"}>
               Why Struggle with Mathematics when you can just contact us and get{" "}
               <br />
               the best tutor who will help you reach your academic goals.
-            </h1>
-          </div>
-
-          <div className=" flex flex-col items-center h-48 lg:space-x-8 pt-7 lg:pt-0 lg:flex-row lg:justify-between lg:w-90">
-            <button className="cursor-pointer pt-2 pb-2 text-1xl rounded-full shadow-2xl lg:mr-5 hover:text-green-300  pl-3 pr-3  focus:outline-none  font-medium text-gray-50 bg-opacity-0 ring-2 ring-white">
-              <Link to="/bookATutor">Get A Tutor Today</Link>
-            </button>
-          </div>
-        </div>
-      </div>
+            </Text>
+            <Stack
+              spacing={{ base: 4, sm: 6 }}
+              direction={{ base: "column", sm: "row" }}
+            >
+              <Button
+                rounded={"full"}
+                size={"lg"}
+                fontWeight={"normal"}
+                px={6}
+                colorScheme={"red"}
+                bg={"blue.400"}
+                _hover={{ bg: "blue.500" }}
+              >
+                <Link to="/bookATutor">Get A Tutor Today</Link>
+              </Button>
+            </Stack>
+          </Stack>
+          <Flex
+            flex={1}
+            justify={"center"}
+            align={"center"}
+            position={"relative"}
+            w={"full"}
+          >
+            <Box
+              position={"relative"}
+              height={"300px"}
+              rounded={"2xl"}
+              boxShadow={"2xl"}
+              width={"full"}
+              overflow={"hidden"}
+            >
+              <IconButton
+                aria-label={"Play Button"}
+                variant={"ghost"}
+                _hover={{ bg: "transparent" }}
+                size={"lg"}
+                color={"white"}
+                position={"absolute"}
+                left={"50%"}
+                top={"50%"}
+                transform={"translateX(-50%) translateY(-50%)"}
+              />
+              <Image
+                alt={"Hero Image"}
+                // fit={"cover"}
+                align={"center"}
+                w={"120%"}
+                h={"100%"}
+                src={"img/teaching02.svg"}
+              />
+            </Box>
+          </Flex>
+        </Stack>
+      </Container>
     </>
   );
 };
