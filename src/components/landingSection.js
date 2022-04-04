@@ -50,6 +50,7 @@ const LandingSection = () => {
                 colorScheme={"red"}
                 bg={"blue.400"}
                 _hover={{ bg: "blue.500" }}
+                position={"none"}
               >
                 <Link to="/bookATutor">Get A Tutor Today</Link>
               </Button>
