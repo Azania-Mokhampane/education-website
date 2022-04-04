@@ -14,11 +14,7 @@ import {
   Icon,
   useColorModeValue,
 } from "@chakra-ui/react";
-import {
-  IoAnalyticsSharp,
-  IoLogoBitcoin,
-  IoSearchSharp,
-} from "react-icons/io5";
+import { IoSchoolOutline, IoLogoUsd, IoSearchSharp } from "react-icons/io5";
 
 const Feature = ({ text, icon, iconBg }) => {
   return (
@@ -50,8 +46,8 @@ const About = () => {
             <Text
               textTransform={"uppercase"}
               color={"blue.400"}
-              fontWeight={600}
-              fontSize={"sm"}
+              fontWeight={700}
+              fontSize={"xl"}
               bg={useColorModeValue("blue.50", "blue.900")}
               p={2}
               alignSelf={"flex-start"}
@@ -80,20 +76,13 @@ const About = () => {
             >
               <Feature
                 icon={
-                  <Icon
-                    as={IoAnalyticsSharp}
-                    color={"yellow.500"}
-                    w={5}
-                    h={5}
-                  />
+                  <Icon as={IoSchoolOutline} color={"yellow.500"} w={5} h={5} />
                 }
                 iconBg={useColorModeValue("yellow.100", "yellow.900")}
                 text={"Best Tutors"}
               />
               <Feature
-                icon={
-                  <Icon as={IoLogoBitcoin} color={"green.500"} w={5} h={5} />
-                }
+                icon={<Icon as={IoLogoUsd} color={"green.500"} w={5} h={5} />}
                 iconBg={useColorModeValue("green.100", "green.900")}
                 text={"Affordable"}
               />
