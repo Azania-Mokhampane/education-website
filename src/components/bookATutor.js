@@ -19,15 +19,9 @@ const BookATutor = () => {
   const [userName, setUserName] = useState("");
   const [surname, setSurname] = useState("");
   const [userEmail, setUserEmail] = useState("");
-  // const [userInfo, setUserInfo] = useState({
-  //   userName: "",
-  //   userSurname: "",
-  //   userEmail: "",
-  // });
+  const [education, setEducation] = useState("Level Of Education");
+  const [location, setLocation] = useState("Province");
 
-  // const userInfoHandler = (event) => {
-  //   setUserInfo(event.target.value);
-  // };
   const userNameHandler = (event) => {
     setUserName(event.target.value);
   };
@@ -37,6 +31,12 @@ const BookATutor = () => {
   };
   const userEmailHandler = (event) => {
     setUserEmail(event.target.value);
+  };
+  const userEducationHandler = (event) => {
+    setEducation(event.target.value);
+  };
+  const userLocationHandler = (event) => {
+    setLocation(event.target.value);
   };
 
   return (
@@ -109,16 +109,24 @@ const BookATutor = () => {
                       required
                     ></Input>
                     <Select
-                      placeholder="Level Of Education"
+                      value={education}
+                      placeholder="Level of Education"
                       variant="filled"
                       mb={3}
+                      onChange={userEducationHandler}
                     >
                       <option value="option1">Primary</option>
                       <option value="option2">Secondary</option>
                       <option value="option3">Tertiary</option>
                     </Select>
 
-                    <Select placeholder="Province" variant="filled" mb={3}>
+                    <Select
+                      value={location}
+                      placeholder="Province"
+                      variant="filled"
+                      mb={3}
+                      onChange={userLocationHandler}
+                    >
                       <option value="option1">Gauteng</option>
                       <option value="option2">Mpumalanga</option>
                       <option value="option3">Free State</option>
@@ -132,6 +140,11 @@ const BookATutor = () => {
 
                     <BookingButton
                       username={userName}
+                      setEducation={setEducation}
+                      setLocation={setLocation}
+                      setSurname={setSurname}
+                      setUserEmail={setUserEmail}
+                      setUserName={setUserName}
                       type="submit"
                       // setUserInfo={setUserInfo}
                     />
