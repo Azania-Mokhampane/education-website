@@ -94,61 +94,65 @@ const ContactUs = () => {
                     bg={useColorModeValue("white", "gray.800")}
                     borderRadius="lg"
                   >
-                    <Box m={8} color={useColorModeValue("gray.900", "white")}>
-                      <VStack spacing={5}>
-                        <FormControl id="name">
-                          <FormLabel>Your Name</FormLabel>
-                          <InputGroup borderColor="#E0E1E7">
-                            <InputLeftElement
-                              pointerEvents="none"
-                              children={<BsPerson color="gray.800" />}
-                            />
-                            <Input
-                              type="text"
-                              size="md"
+                    <form>
+                      <Box m={8} color={useColorModeValue("gray.900", "white")}>
+                        <VStack spacing={5}>
+                          <FormControl id="name">
+                            <FormLabel>Your Name</FormLabel>
+                            <InputGroup borderColor="#E0E1E7">
+                              <InputLeftElement
+                                pointerEvents="none"
+                                children={<BsPerson color="gray.800" />}
+                              />
+                              <Input
+                                type="text"
+                                size="md"
+                                required
+                                placeholder="Name"
+                              />
+                            </InputGroup>
+                          </FormControl>
+                          <FormControl id="name">
+                            <FormLabel>Email</FormLabel>
+                            <InputGroup borderColor="#E0E1E7">
+                              <InputLeftElement
+                                pointerEvents="none"
+                                children={<MdOutlineEmail color="gray.800" />}
+                              />
+                              <Input
+                                type="email"
+                                size="md"
+                                placeholder="Email"
+                                required
+                              />
+                            </InputGroup>
+                          </FormControl>
+                          <FormControl id="name">
+                            <FormLabel>Message</FormLabel>
+                            <Textarea
+                              borderColor="gray.300"
+                              _hover={{
+                                borderRadius: "gray.300",
+                              }}
+                              placeholder="Message"
                               required
-                              placeholder="Name"
                             />
-                          </InputGroup>
-                        </FormControl>
-                        <FormControl id="name">
-                          <FormLabel>Email</FormLabel>
-                          <InputGroup borderColor="#E0E1E7">
-                            <InputLeftElement
-                              pointerEvents="none"
-                              children={<MdOutlineEmail color="gray.800" />}
-                            />
-                            <Input
-                              type="email"
-                              size="md"
-                              placeholder="Email"
-                              required
-                            />
-                          </InputGroup>
-                        </FormControl>
-                        <FormControl id="name">
-                          <FormLabel>Message</FormLabel>
-                          <Textarea
-                            borderColor="gray.300"
-                            _hover={{
-                              borderRadius: "gray.300",
-                            }}
-                            placeholder="Message"
-                            required
-                          />
-                        </FormControl>
-                        <FormControl id="name" float="right">
-                          <Button
-                            variant="solid"
-                            bg="#0D74FF"
-                            color="white"
-                            _hover={{}}
-                          >
-                            Send Message
-                          </Button>
-                        </FormControl>
-                      </VStack>
-                    </Box>
+                          </FormControl>
+                          <FormControl id="name" float="right">
+                            <button type="submit">
+                              <Button
+                                variant="solid"
+                                bg="#0D74FF"
+                                color="white"
+                                _hover={{}}
+                              >
+                                Send Message
+                              </Button>
+                            </button>
+                          </FormControl>
+                        </VStack>
+                      </Box>
+                    </form>
                   </Box>
                 </WrapItem>
               </Wrap>
