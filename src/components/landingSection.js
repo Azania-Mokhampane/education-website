@@ -47,7 +47,7 @@ const LandingSection = () => {
                 size={"lg"}
                 fontWeight={"normal"}
                 px={6}
-                colorScheme={"red"}
+                colorScheme={"blue"}
                 bg={"blue.400"}
                 _hover={{ bg: "blue.500" }}
                 position={"none"}
