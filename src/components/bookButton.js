@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Modal,
-  ModalOverlay,
   ModalContent,
   ModalHeader,
   ModalFooter,
@@ -29,12 +28,11 @@ const BookingButton = ({
   };
   return (
     <>
-      <button type="submit">
-        <Button onClick={onOpen}>Book</Button>
-      </button>
+      <Button type="submit" onClick={onOpen}>
+        Book Now
+      </Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
         <ModalContent>
           <ModalHeader></ModalHeader>
           <ModalBody>
