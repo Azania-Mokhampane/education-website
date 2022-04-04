@@ -6,7 +6,6 @@ import {
   ModalHeader,
   ModalFooter,
   ModalBody,
-  ModalCloseButton,
   useDisclosure,
   Button,
 } from "@chakra-ui/react";
@@ -20,33 +19,31 @@ const BookingButton = ({
   setEducation,
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const closeModalHandler = () => {
+    onClose(); // this is a function which changes the state of our userName to an empty string when the user close the modal
+    setUserName("");
+    setUserEmail("");
+    setEducation("Level of Education");
+    setLocation("Province");
+    setSurname("");
+  };
   return (
     <>
-      <Button onClick={onOpen}>Book</Button>
+      <button type="submit">
+        <Button onClick={onOpen}>Book</Button>
+      </button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader></ModalHeader>
-          <ModalCloseButton />
           <ModalBody>
             {username} thank you for booking, we'll get back to you as soon as
             posibble
           </ModalBody>
 
           <ModalFooter>
-            <Button
-              colorScheme="blue"
-              mr={3}
-              onClick={() => {
-                onClose(); // this is a function which changes the state of our userName to an empty string when the user close the modal
-                setUserName("");
-                setUserEmail("");
-                setEducation("Level of Education");
-                setLocation("Province");
-                setSurname("");
-              }}
-            >
+            <Button colorScheme="blue" mr={3} onClick={closeModalHandler}>
               Close
             </Button>
           </ModalFooter>
