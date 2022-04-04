@@ -57,7 +57,7 @@ const ContactUs = () => {
                           _hover={{ border: "2px solid #1C6FEB" }}
                           leftIcon={<MdPhone color="#1970F1" size="20px" />}
                         >
-                          +27 69 145 6585
+                          <a href="tel:+27691456585">+27 69 145 6585</a>
                         </Button>
                         <Button
                           size="md"
@@ -68,7 +68,9 @@ const ContactUs = () => {
                           _hover={{ border: "2px solid #1C6FEB" }}
                           leftIcon={<MdEmail color="#1970F1" size="20px" />}
                         >
-                          azaniam04@gmail.com
+                          <a href="maito:azaniam04@gmail.com">
+                            azaniam04@gmail.com
+                          </a>
                         </Button>
                         <Button
                           size="md"
@@ -101,7 +103,12 @@ const ContactUs = () => {
                               pointerEvents="none"
                               children={<BsPerson color="gray.800" />}
                             />
-                            <Input type="text" size="md" />
+                            <Input
+                              type="text"
+                              size="md"
+                              required
+                              placeholder="Name"
+                            />
                           </InputGroup>
                         </FormControl>
                         <FormControl id="name">
@@ -111,7 +118,12 @@ const ContactUs = () => {
                               pointerEvents="none"
                               children={<MdOutlineEmail color="gray.800" />}
                             />
-                            <Input type="text" size="md" />
+                            <Input
+                              type="email"
+                              size="md"
+                              placeholder="Email"
+                              required
+                            />
                           </InputGroup>
                         </FormControl>
                         <FormControl id="name">
@@ -121,7 +133,8 @@ const ContactUs = () => {
                             _hover={{
                               borderRadius: "gray.300",
                             }}
-                            placeholder="message"
+                            placeholder="Message"
+                            required
                           />
                         </FormControl>
                         <FormControl id="name" float="right">
