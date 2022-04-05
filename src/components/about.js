@@ -58,7 +58,7 @@ const About = () => {
             <Heading>A digital tutoring company</Heading>
             <Text color={"gray.500"} fontSize={"lg"}>
               Azania Math Solutions is a small business intended to help every
-              individual who needs assisstane with Mathematics to improve their
+              individual who needs assisstance with Mathematics to improve their
               grades. We are one of the companies with best tutors who does not
               use a single method for teaching as individuals do not have the
               same level of understanding. At Azania Math Solutions we take
