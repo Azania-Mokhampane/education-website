@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import ReCaptcha from "./recaptcha";
 
 import "../styles/custom.css";
 
@@ -157,6 +158,7 @@ const BookATutor = () => {
       </Formik>
 
       <Footer />
+      <ReCaptcha />
     </>
   );
 };
