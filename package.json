@@ -18,6 +18,7 @@
     "framer-motion": "^4.1.17",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-google-invisible-recaptcha": "^0.2.12",
     "react-google-recaptcha-v3": "^1.9.7",
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.2.2",
