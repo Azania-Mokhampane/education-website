@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./navbar";
 import Footer from "./footer";
+import ReCaptcha from "./recaptcha";
 import {
   Container,
   Flex,
@@ -162,6 +163,7 @@ const ContactUs = () => {
       </Container>
 
       <Footer />
+      <ReCaptcha />
     </>
   );
 };
