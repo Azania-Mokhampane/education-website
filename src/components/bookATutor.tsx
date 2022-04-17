@@ -152,7 +152,6 @@ const BookATutor = () => {
                     <BookingButton
                       username={bookingInfo.userName}
                       setBookingInfo={setBookingInfo}
-                      type="submit"
                       // setUserInfo={setUserInfo}
                     />
                   </Flex>
