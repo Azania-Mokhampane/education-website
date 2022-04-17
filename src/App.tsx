@@ -1,3 +1,4 @@
+import React from "react";
 import NavBar from "./components/navbar";
 import LandingSection from "./components/landingSection";
 import Footer from "./components/footer";

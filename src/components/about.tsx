@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { IoSchoolOutline, IoLogoUsd, IoSearchSharp } from "react-icons/io5";
 
-const Feature = ({ text, icon, iconBg }) => {
+const Feature = ({ text, icon, iconBg }: any) => {
   return (
     <Stack direction={"row"} align={"center"}>
       <Flex
