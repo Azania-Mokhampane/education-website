@@ -17,28 +17,13 @@ import "../styles/custom.css";
 
 const BookATutor = () => {
   const formBackground = useColorModeValue("gray.300", "gray.900");
-  const [userName, setUserName] = useState("");
-  const [surname, setSurname] = useState("");
-  const [userEmail, setUserEmail] = useState("");
-  const [education, setEducation] = useState("Level Of Education");
-  const [location, setLocation] = useState("Province");
-
-  const userNameHandler = (event) => {
-    setUserName(event.target.value);
-  };
-
-  const surnameHandler = (event) => {
-    setSurname(event.target.value);
-  };
-  const userEmailHandler = (event) => {
-    setUserEmail(event.target.value);
-  };
-  const userEducationHandler = (event) => {
-    setEducation(event.target.value);
-  };
-  const userLocationHandler = (event) => {
-    setLocation(event.target.value);
-  };
+  const [bookingInfo, setBookingInfo] = useState({
+    userName: "",
+    surname: "",
+    userEmail: "",
+    education: "Level Of Education",
+    location: "Province",
+  });
 
   return (
     <>
@@ -79,10 +64,15 @@ const BookATutor = () => {
                   >
                     <Heading mb={6}>Personal Information</Heading>
                     <Input
-                      value={userName}
+                      value={bookingInfo.userName}
                       id="name"
                       placeholder="Name"
-                      onChange={userNameHandler}
+                      onChange={(e) =>
+                        setBookingInfo({
+                          ...bookingInfo,
+                          userName: e.target.value,
+                        })
+                      }
                       variant="filled"
                       mb={3}
                       type="text"
@@ -90,31 +80,46 @@ const BookATutor = () => {
                       className="overflow-hidden"
                     ></Input>
                     <Input
-                      value={surname}
+                      value={bookingInfo.surname}
                       id="surname"
                       placeholder="Surname"
                       variant="filled"
                       mb={3}
                       type="text"
-                      onChange={surnameHandler}
+                      onChange={(e) =>
+                        setBookingInfo({
+                          ...bookingInfo,
+                          surname: e.target.value,
+                        })
+                      }
                       required
                     ></Input>
                     <Input
-                      value={userEmail}
+                      value={bookingInfo.userEmail}
                       id="email"
                       placeholder="Enter Email Address"
                       variant="filled"
                       mb={3}
                       type="email"
-                      onChange={userEmailHandler}
+                      onChange={(e) =>
+                        setBookingInfo({
+                          ...bookingInfo,
+                          userEmail: e.target.value,
+                        })
+                      }
                       required
                     ></Input>
                     <Select
-                      value={education}
+                      value={bookingInfo.education}
                       placeholder="Level of Education"
                       variant="filled"
                       mb={3}
-                      onChange={userEducationHandler}
+                      onChange={(e) =>
+                        setBookingInfo({
+                          ...bookingInfo,
+                          education: e.target.value,
+                        })
+                      }
                     >
                       <option value="option1">Primary</option>
                       <option value="option2">Secondary</option>
@@ -122,11 +127,16 @@ const BookATutor = () => {
                     </Select>
 
                     <Select
-                      value={location}
+                      value={bookingInfo.location}
                       placeholder="Province"
                       variant="filled"
                       mb={3}
-                      onChange={userLocationHandler}
+                      onChange={(e) =>
+                        setBookingInfo({
+                          ...bookingInfo,
+                          location: e.target.value,
+                        })
+                      }
                     >
                       <option value="option1">Gauteng</option>
                       <option value="option2">Mpumalanga</option>
@@ -140,12 +150,8 @@ const BookATutor = () => {
                     </Select>
 
                     <BookingButton
-                      username={userName}
-                      setEducation={setEducation}
-                      setLocation={setLocation}
-                      setSurname={setSurname}
-                      setUserEmail={setUserEmail}
-                      setUserName={setUserName}
+                      username={bookingInfo.userName}
+                      setBookingInfo={setBookingInfo}
                       type="submit"
                       // setUserInfo={setUserInfo}
                     />
