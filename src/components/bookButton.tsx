@@ -9,7 +9,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-const BookingButton = ({ username, setBookingInfo }) => {
+const BookingButton = ({ username, setBookingInfo }: any) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const closeModalHandler = () => {
     onClose(); // this is a function which changes the state of our userName to an empty string when the user close the modal
