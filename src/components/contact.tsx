@@ -49,30 +49,35 @@ const ContactUs = () => {
                     </Text>
                     <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                       <VStack pl={0} spacing={3} alignItems="flex-start">
-                        <Button
-                          size="md"
-                          height="48px"
-                          width="200px"
-                          variant="ghost"
-                          color={useColorModeValue("gray.800", "gray.200")}
-                          _hover={{ border: "2px solid #1C6FEB" }}
-                          leftIcon={<MdPhone color="#1970F1" size="20px" />}
-                        >
-                          <a href="tel:+27691456585">+27 69 145 6585</a>
-                        </Button>
-                        <Button
-                          size="md"
-                          height="48px"
-                          width="200px"
-                          variant="ghost"
-                          color={useColorModeValue("gray.800", "gray.200")}
-                          _hover={{ border: "2px solid #1C6FEB" }}
-                          leftIcon={<MdEmail color="#1970F1" size="20px" />}
-                        >
-                          <a href="maito:azaniam04@gmail.com">
+                        <a href="tel:+27691456585">
+                          <Button
+                            size="md"
+                            height="48px"
+                            width="200px"
+                            variant="ghost"
+                            color={useColorModeValue("gray.800", "gray.200")}
+                            _hover={{ border: "2px solid #1C6FEB" }}
+                            leftIcon={<MdPhone color="#1970F1" size="20px" />}
+                          >
+                            +27 69 145 6585
+                          </Button>
+                        </a>
+
+                        <a href="mailto:azaniam04@gmail.com">
+                          <Button
+                            size="md"
+                            height="48px"
+                            width="200px"
+                            variant="ghost"
+                            color={useColorModeValue("gray.800", "gray.200")}
+                            _hover={{ border: "2px solid #1C6FEB" }}
+                            leftIcon={<MdEmail color="#1970F1" size="20px" />}
+                          >
+                            {" "}
                             azaniam04@gmail.com
-                          </a>
-                        </Button>
+                          </Button>
+                        </a>
+
                         <Button
                           size="md"
                           height="48px"

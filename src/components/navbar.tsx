@@ -9,7 +9,7 @@ import { BsSun, BsMoonStarsFill } from "react-icons/bs";
 const NavBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Disclosure id="home" as="nav" className="top-0 fixed  w-full bg-gray-800">
+    <Disclosure id="home" as="nav" className="top-0 sticky  w-full bg-gray-800">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
@@ -46,18 +46,31 @@ const NavBar = () => {
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     <ul className="flex space-x-4">
-                      <li className="text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                        <Link to="/">Home</Link>
-                      </li>
-                      <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                        <Link to="/about">About Us</Link>
-                      </li>
-                      <li className="  text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                        <Link to="/contact">Contact Us</Link>
-                      </li>
-                      <li className="text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                        <Link to="/bookATutor">Book A Tutor</Link>
-                      </li>
+                      <Link to="/">
+                        <li className="text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                          Home
+                        </li>
+                      </Link>
+
+                      <Link to="/about">
+                        <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                          About Us
+                        </li>
+                      </Link>
+
+                      <Link to="/contact">
+                        {" "}
+                        <li className="  text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                          Contact Us
+                        </li>
+                      </Link>
+
+                      <Link to="/bookATutor">
+                        {" "}
+                        <li className="text-white text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                          Book A Tutor{" "}
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                 </div>
@@ -74,18 +87,29 @@ const NavBar = () => {
           <Disclosure.Panel className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <ul>
-                <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                  <Link to="/">Home</Link>
-                </li>
-                <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                  <Link to="/about">About Us</Link>
-                </li>
-                <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                  <Link to="/contact">Contact Us</Link>
-                </li>
-                <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                  <Link to="/bookATutor">Book A Tutor</Link>
-                </li>
+                <Link to="/">
+                  <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                    Home
+                  </li>
+                </Link>
+
+                <Link to="/about">
+                  <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                    About Us
+                  </li>
+                </Link>
+
+                <Link to="/contact">
+                  <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                    Contact Us
+                  </li>
+                </Link>
+
+                <Link to="/bookATutor">
+                  <li className=" text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                    Book A Tutor
+                  </li>
+                </Link>
               </ul>
             </div>
           </Disclosure.Panel>
