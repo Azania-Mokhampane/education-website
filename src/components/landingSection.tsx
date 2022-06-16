@@ -1,85 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  Stack,
-  Flex,
-  Box,
-  Heading,
-  Text,
-  Button,
-  Image,
-} from "@chakra-ui/react";
 
 import "../styles/custom.css";
 
 const LandingSection = () => {
   return (
     <>
-      <Stack p={8} minH={"100vh"} direction={{ base: "column", md: "row" }}>
-        <Stack
-          flex={1}
-          align={"center"}
-          justify={"center"}
-          spacing={{ base: 5, md: 10 }}
-          w={"full"}
-        >
-          <Heading
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
-          >
-            <Text as={"span"} color={"white.400"}>
-              Azania Math Solutions!
-            </Text>
-          </Heading>
-          <Text color={"gray.500"}>
+      <div className="flex flex-col md:flex-row p-8 min-h-screen ">
+        <div className="flex flex-col flex-1 items-center justify-center space-y-5 md:space-y-10 w-full">
+          <h2 className="leading-tight font-semibold text-3xl md:text-5xl">
+            <p className="text-white.400">Azania Math Solutions!</p>
+          </h2>
+          <p className="text-gray-400">
             Why Struggle with Mathematics when you can just contact us and get{" "}
             <br />
             the best tutor who will help you reach your academic goals.
-          </Text>
-          <Stack
-            spacing={{ base: 4, sm: 6 }}
-            direction={{ base: "column", sm: "row" }}
-          >
-            <Button
-              rounded={"full"}
-              size={"lg"}
-              fontWeight={"normal"}
-              px={6}
-              colorScheme={"blue"}
-              bg={"blue.400"}
-              _hover={{ bg: "blue.500" }}
-            >
+          </p>
+          <div className="flex flex-col md:flex-row ">
+            <button className="rounded-full text-gray-800 text-lg font-normal py-3 px-6 bg-blue-400 hover:bg-blue-500">
               <Link to="/bookATutor">Get A Tutor Today</Link>
-            </Button>
-          </Stack>
-        </Stack>
-        <Flex
-          flex={1}
-          justify={"center"}
-          align={"center"}
-          position={"relative"}
-          w={"full"}
-        >
-          <Box
-            position={"relative"}
-            height={{ base: "300px", md: "500px" }}
-            rounded={"2xl"}
-            boxShadow={"2xl"}
-            width={"full"}
-            overflow={"hidden"}
-          >
-            <Image
-              alt={"Hero Image"}
-              // fit={"cover"}
-              align={"center"}
-              w={"120%"}
-              h={"100%"}
-              src={"img/teaching02.svg"}
+            </button>
+          </div>
+        </div>
+        <div className="flex flex-1 justify-center items-center relative w-full">
+          <div className="relative h-78 md:h-105 rounded-2xl shadow-2xl w-full truncate">
+            <img
+              className="items-center w-full h-full"
+              alt="A teacher"
+              src="img/teaching02.svg"
             />
-          </Box>
-        </Flex>
-      </Stack>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

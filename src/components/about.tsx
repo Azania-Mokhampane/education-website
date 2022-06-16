@@ -2,35 +2,21 @@ import React from "react";
 import NavBar from "./navbar";
 import Footer from "./footer";
 
-import {
-  Container,
-  SimpleGrid,
-  Image,
-  Flex,
-  Heading,
-  Text,
-  Stack,
-  StackDivider,
-  Icon,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/react";
 import { IoSchoolOutline, IoLogoUsd, IoSearchSharp } from "react-icons/io5";
 
 const Feature = ({ text, icon, iconBg }: any) => {
   return (
-    <Stack direction={"row"} align={"center"}>
-      <Flex
-        w={8}
-        h={8}
-        align={"center"}
-        justify={"center"}
-        rounded={"full"}
-        bg={iconBg}
+    <div className="flex flex-row space-x-2 items-center">
+      <div
+        className="flex w-8 h-8 items-center justify-center rounded-full"
+        // style={{ backgroundColor: `${iconBg}` }}
+        // bg={iconBg}
       >
         {icon}
-      </Flex>
-      <Text fontWeight={600}>{text}</Text>
-    </Stack>
+      </div>
+      <p className="font-semibold ">{text}</p>
+    </div>
   );
 };
 
@@ -38,25 +24,18 @@ const About = () => {
   return (
     <>
       <NavBar />
-      <br />
-      <br />
-      <Container maxW={"5xl"} py={12}>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-          <Stack spacing={4}>
-            <Text
-              textTransform={"uppercase"}
-              color={"blue.400"}
-              fontWeight={700}
-              fontSize={"xl"}
-              bg={useColorModeValue("blue.50", "blue.900")}
-              p={2}
-              alignSelf={"flex-start"}
-              rounded={"md"}
+
+      <div className="mx-5 md:mx-auto max-w-5xl py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="flex flex-col gap-4">
+            <p
+              className="uppercase bg-blue-100 dark:bg-blue-900 text-blue-400 font-bold text-xl p-2 self-start rounded-md"
+              // bg={useColorModeValue("blue.50", "blue.900")}
             >
               About Us
-            </Text>
-            <Heading>A digital tutoring company</Heading>
-            <Text color={"gray.500"} fontSize={"lg"}>
+            </p>
+            <h2 className="text-3xl font-bold">A digital tutoring company</h2>
+            <p className="text-gray-500 text-lg">
               Azania Math Solutions is a small business intended to help every
               individual who needs assisstance with Mathematics to improve their
               grades. We are one of the companies with best tutors who does not
@@ -65,46 +44,48 @@ const About = () => {
               those kinds of things into consideration and teach or help
               different individuals who has different needs with different
               teaching styles.
-            </Text>
-            <Stack
-              spacing={4}
-              divider={
-                <StackDivider
-                  borderColor={useColorModeValue("gray.100", "gray.700")}
-                />
-              }
+            </p>
+            <div
+              className="flex flex-col gap-4 divide-y divide-solid "
+              // divider={
+              //   <StackDivider
+              //     borderColor={useColorModeValue("gray.100", "gray.700")}
+              //   />
+              // }
             >
               <Feature
                 icon={
-                  <Icon as={IoSchoolOutline} color={"yellow.500"} w={5} h={5} />
+                  <IoSchoolOutline className="text-yellow-500  w-5 h-5" />
+                  // <Icon as={IoSchoolOutline} color={"yellow.500"} w={5} h={5} />
                 }
                 iconBg={useColorModeValue("yellow.100", "yellow.900")}
                 text={"Best Tutors"}
               />
               <Feature
-                icon={<Icon as={IoLogoUsd} color={"green.500"} w={5} h={5} />}
+                icon={<IoLogoUsd className="text-green-500 w-5 h-5" />}
+                // <Icon as={IoLogoUsd} color={"green.500"} w={5} h={5} />
                 iconBg={useColorModeValue("green.100", "green.900")}
                 text={"Affordable"}
               />
               <Feature
                 icon={
-                  <Icon as={IoSearchSharp} color={"purple.500"} w={5} h={5} />
+                  <IoSearchSharp className="text-purple-500 w-5 h-5" />
+                  // <Icon as={IoSearchSharp} color={"purple.500"} w={5} h={5} />
                 }
                 iconBg={useColorModeValue("purple.100", "purple.900")}
                 text={"Different Teaching Methods"}
               />
-            </Stack>
-          </Stack>
-          <Flex>
-            <Image
-              rounded={"md"}
-              alt={"feature image"}
+            </div>
+          </div>
+          <div className="flex">
+            <img
+              className="rounded-md object-cover"
+              alt="numbers on the wall"
               src="img/about-math02.jpg"
-              objectFit={"cover"}
             />
-          </Flex>
-        </SimpleGrid>
-      </Container>
+          </div>
+        </div>
+      </div>
 
       <Footer />
     </>
