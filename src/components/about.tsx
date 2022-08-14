@@ -2,10 +2,14 @@ import React from "react";
 import NavBar from "./navbar";
 import Footer from "./footer";
 
-import { useColorModeValue } from "@chakra-ui/react";
+// import { useColorModeValue } from "@chakra-ui/react";
 import { IoSchoolOutline, IoLogoUsd, IoSearchSharp } from "react-icons/io5";
 
-const Feature = ({ text, icon, iconBg }: any) => {
+interface IFeatureProps {
+  text: string
+  icon: string | any
+}
+const Feature = ({ text, icon }: IFeatureProps) => {
   return (
     <div className="flex flex-row space-x-2 items-center">
       <div
@@ -58,13 +62,13 @@ const About = () => {
                   <IoSchoolOutline className="text-yellow-500  w-5 h-5" />
                   // <Icon as={IoSchoolOutline} color={"yellow.500"} w={5} h={5} />
                 }
-                iconBg={useColorModeValue("yellow.100", "yellow.900")}
+                // iconBg={useColorModeValue("yellow.100", "yellow.900")}
                 text={"Best Tutors"}
               />
               <Feature
                 icon={<IoLogoUsd className="text-green-500 w-5 h-5" />}
                 // <Icon as={IoLogoUsd} color={"green.500"} w={5} h={5} />
-                iconBg={useColorModeValue("green.100", "green.900")}
+                // iconBg={useColorModeValue("green.100", "green.900")}
                 text={"Affordable"}
               />
               <Feature
@@ -72,7 +76,7 @@ const About = () => {
                   <IoSearchSharp className="text-purple-500 w-5 h-5" />
                   // <Icon as={IoSearchSharp} color={"purple.500"} w={5} h={5} />
                 }
-                iconBg={useColorModeValue("purple.100", "purple.900")}
+                // iconBg={useColorModeValue("purple.100", "purple.900")}
                 text={"Different Teaching Methods"}
               />
             </div>

@@ -76,7 +76,6 @@ const NavBar = () => {
                 </div>
                 <div className="absolute right-0">
                   <Button onClick={toggleColorMode}>
-                    {" "}
                     {colorMode === "light" ? <BsMoonStarsFill /> : <BsSun />}
                   </Button>
                 </div>
