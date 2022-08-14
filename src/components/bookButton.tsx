@@ -5,12 +5,30 @@ import {
   ModalHeader,
   ModalFooter,
   ModalBody,
-  useDisclosure,
   Button,
 } from "@chakra-ui/react";
 
-const BookingButton = ({ username, setBookingInfo }: any) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+interface IBookButtonProps {
+  username: string;
+  setBookingInfo: React.Dispatch<
+    React.SetStateAction<{
+      userName: string;
+      surname: string;
+      userEmail: string;
+      education: string;
+      location: string;
+    }>
+  >;
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const BookingButton = ({
+  username,
+  setBookingInfo,
+  isOpen,
+  onClose,
+}: IBookButtonProps) => {
   const closeModalHandler = () => {
     onClose(); // this is a function which changes the state of our userName to an empty string when the user close the modal
     setBookingInfo({
@@ -23,10 +41,6 @@ const BookingButton = ({ username, setBookingInfo }: any) => {
   };
   return (
     <>
-      <Button type="submit" onClick={onOpen}>
-        Book Now
-      </Button>
-
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalContent>
           <ModalHeader></ModalHeader>
