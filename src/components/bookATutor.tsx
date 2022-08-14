@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import NavBar from "./navbar";
 import Footer from "./footer";
 import BookingButton from "./bookButton";
-import { useColorModeValue, Box } from "@chakra-ui/react";
+import {
+  useColorModeValue,
+  Box,
+  Button,
+  useDisclosure,
+} from "@chakra-ui/react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import ReCaptcha from "./recaptcha";
@@ -10,6 +15,7 @@ import ReCaptcha from "./recaptcha";
 import "../styles/custom.css";
 
 const BookATutor = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const formBackground = useColorModeValue("gray.300", "gray.900");
   const [bookingInfo, setBookingInfo] = useState({
     userName: "",
@@ -19,6 +25,10 @@ const BookATutor = () => {
     location: "Province",
   });
 
+  const submitHandler = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    onOpen();
+  };
   return (
     <>
       <div className="h-screen">
@@ -40,7 +50,7 @@ const BookATutor = () => {
             console.log(values);
           }}
         >
-          {({ handleSubmit }) => {
+          {() => {
             return (
               <>
                 <h1 className="pt-20 text-center text-3xl font-medium  leading-10">
@@ -49,7 +59,7 @@ const BookATutor = () => {
                 <div className="flex items-center justify-center m-5">
                   <form
                     style={{ width: "auto", height: "auto" }}
-                    onSubmit={handleSubmit}
+                    onSubmit={submitHandler}
                   >
                     <Box
                       className="flex flex-col p-12 rounded-md"
@@ -139,11 +149,12 @@ const BookATutor = () => {
                         <option value="option2">North West</option>
                         <option value="option3">KwaZulu-Natal</option>
                       </select>
-
+                      <Button type="submit">Book Now</Button>
                       <BookingButton
+                        isOpen={isOpen}
+                        onClose={onClose}
                         username={bookingInfo.userName}
                         setBookingInfo={setBookingInfo}
-                        // setUserInfo={setUserInfo}
                       />
                     </Box>
                   </form>
